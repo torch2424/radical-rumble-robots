@@ -8,7 +8,9 @@ echo "Compiling Game"
 echo "============================================="
 echo " "
 
-lcc -Wa-l -Wl-m -Wl-j -c -o main.o main.c
+mkdir -p dist
+cd dist
+lcc -Wa-l -Wl-m -Wl-j -c -o main.o ../main.c
 lcc -Wa-l -Wl-m -Wl-j -o main.gb main.o
 
 echo " "
