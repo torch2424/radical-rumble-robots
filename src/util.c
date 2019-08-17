@@ -1,2 +1,5 @@
-// Included in main.c
-printf("Yo!");
+
+void waitForFrame() {
+  wait_vbl_done();
+}
+
