@@ -10,6 +10,9 @@
 // A C program always starts by calling the `main()` function. If you are
 // unfamiliar with this I suggest reading up on C first.
 void main() {
+
+  // {{./src/util.c}}
+
   // Prints the string `Hello World!` to the screen. Internally it uses the
   // background layer to do so as you can see in the VRAM of your favorite
   // emulator.

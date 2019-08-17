@@ -1,0 +1,31 @@
+{
+  "name": "radical-rumble-robots",
+  "version": "0.0.1",
+  "description": "A fighting game for the gameboy",
+  "main": "index.js",
+  "scripts": {
+    "predev": "npm run build",
+    "dev": "npx run-p serve watch",
+    "build": "npx run-s build:combine-src build:gbdk",
+    "build:combine-src": "node combine-src.js",
+    "build:gbdk": "./gbdk-build.sh",
+    "watch": "npx watch \"npm run build\" src --wait 1",
+    "serve": "serve -n -l 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torch2424/radical-rumble-robots.git"
+  },
+  "author": "Aaron Turner",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/torch2424/radical-rumble-robots/issues"
+  },
+  "homepage": "https://github.com/torch2424/radical-rumble-robots#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "serve": "^11.1.0",
+    "wasmboy": "^0.5.0",
+    "watch": "^1.0.2"
+  }
+}

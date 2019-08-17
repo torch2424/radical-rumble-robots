@@ -10,7 +10,7 @@ echo " "
 
 mkdir -p dist
 cd dist
-lcc -Wa-l -Wl-m -Wl-j -c -o main.o ../main.c
+lcc -Wa-l -Wl-m -Wl-j -c -o main.o main.c
 lcc -Wa-l -Wl-m -Wl-j -o main.gb main.o
 
 echo " "
