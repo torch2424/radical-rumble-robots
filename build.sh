@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+echo " "
+echo "============================================="
+echo "Compiling Game"
+echo "============================================="
+echo " "
+
+lcc -Wa-l -Wl-m -Wl-j -c -o main.o main.c
+lcc -Wa-l -Wl-m -Wl-j -o main.gb main.o
+
+echo " "
+echo "============================================="
+echo "Done!"
+echo "============================================="
+echo " "
+

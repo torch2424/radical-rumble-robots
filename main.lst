@@ -1,0 +1,118 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : FreeWare ANSI-C Compiler
+                              3 ; Version 2.3.1 Fri Aug 16 22:38:11 2019
+                              4 
+                              5 ;--------------------------------------------------------
+                              6 	.module lcc28600
+                              7 	
+                              8 ;--------------------------------------------------------
+                              9 ; Public variables in this module
+                             10 ;--------------------------------------------------------
+                             11 	.globl _main
+                             12 ;--------------------------------------------------------
+                             13 ; special function registers
+                             14 ;--------------------------------------------------------
+                             15 ;--------------------------------------------------------
+                             16 ; special function bits 
+                             17 ;--------------------------------------------------------
+                             18 ;--------------------------------------------------------
+                             19 ; internal ram data
+                             20 ;--------------------------------------------------------
+                             21 	.area _DATA
+                             22 ;--------------------------------------------------------
+                             23 ; overlayable items in internal ram 
+                             24 ;--------------------------------------------------------
+                             25 	.area _OVERLAY
+                             26 ;--------------------------------------------------------
+                             27 ; indirectly addressable internal ram data
+                             28 ;--------------------------------------------------------
+                             29 	.area _ISEG
+                             30 ;--------------------------------------------------------
+                             31 ; bit data
+                             32 ;--------------------------------------------------------
+                             33 	.area _BSEG
+                             34 ;--------------------------------------------------------
+                             35 ; external ram data
+                             36 ;--------------------------------------------------------
+                             37 	.area _XSEG
+                             38 ;--------------------------------------------------------
+                             39 ; global & static initialisations
+                             40 ;--------------------------------------------------------
+                             41 	.area _GSINIT
+                             42 	.area _GSFINAL
+                             43 	.area _GSINIT
+                             44 ;--------------------------------------------------------
+                             45 ; Home
+                             46 ;--------------------------------------------------------
+                             47 	.area _HOME
+                             48 	.area _CODE
+                             49 ;--------------------------------------------------------
+                             50 ; code
+                             51 ;--------------------------------------------------------
+                             52 	.area _CODE
+                             53 ;	main.c 12
+                             54 ;	genLabel
+                             55 ;	genFunction
+                             56 ;	---------------------------------
+                             57 ; Function main
+                             58 ; ---------------------------------
+   0000                      59 ___main_start:
+   0000                      60 _main:
+                             61 	
+                             62 ;	main.c 16
+                             63 ;	genIpush
+                             64 ; _saveRegsForCall: sendSetSize: 0 deInUse: 0 bcInUse: 0 deSending: 0
+   0000 21 13 00             65 	ld	hl,#__str_0
+   0003 E5                   66 	push	hl
+                             67 ;	genCall
+   0004 CD 00 00             68 	call	_printf
+   0007 E8 02                69 	lda	sp,2(sp)
+                             70 ;	main.c 19
+                             71 ;	genIpush
+                             72 ; _saveRegsForCall: sendSetSize: 0 deInUse: 0 bcInUse: 0 deSending: 0
+   0009 21 20 00             73 	ld	hl,#__str_1
+   000C E5                   74 	push	hl
+                             75 ;	genCall
+   000D CD 00 00             76 	call	_printf
+   0010 E8 02                77 	lda	sp,2(sp)
+                             78 ;	genLabel
+   0012                      79 00101$:
+                             80 ;	genEndFunction
+                             81 	
+   0012 C9                   82 	ret
+   0013                      83 ___main_end:
+   0013                      84 __str_0:
+   0013 48 65 6C 6C 6F 20    85 	.ascii "Hello World!"
+        57 6F 72 6C 64 21
+   001F 00                   86 	.db 0x00
+   0020                      87 __str_1:
+   0020 0A                   88 	.db 0x0A
+   0021 0A                   89 	.db 0x0A
+   0022 50 72 65 73 73 20    90 	.ascii "Press Start"
+        53 74 61 72 74
+   002D 00                   91 	.db 0x00
+                             92 	.area _CODE
+ASxxxx Assembler V01.75  (GameBoy Z80-like CPU), page 1.
+
+Symbol Table
+
+  0 ___main_end                        0013 R
+  0 ___main_start                      0000 R
+  0 __str_0                            0013 R
+  0 __str_1                            0020 R
+  0 _main                              0000 GR
+    _printf                            **** GX
+
+ASxxxx Assembler V01.75  (GameBoy Z80-like CPU), page 2.
+
+Area Table
+
+   0 _CODE                              size   2E   flags 0
+   1 _DATA                              size    0   flags 0
+   2 _OVERLAY                           size    0   flags 0
+   3 _ISEG                              size    0   flags 0
+   4 _BSEG                              size    0   flags 0
+   5 _XSEG                              size    0   flags 0
+   6 _GSINIT                            size    0   flags 0
+   7 _GSFINAL                           size    0   flags 0
+   8 _HOME                              size    0   flags 0
