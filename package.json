@@ -6,9 +6,9 @@
   "scripts": {
     "predev": "npm run build",
     "dev": "npx run-p serve watch",
-    "build": "npx run-s build:tiles build:gbdk",
-    "build:tiles": "npx ggbgfx sprite src/smile.png -o src/smile.c",
-    "build:gbdk": "./gbdk-build.sh",
+    "build": "npx run-s build:graphics build:gbdk",
+    "build:graphics": "node build-graphics.js",
+    "build:gbdk": "./build-gbdk.sh",
     "watch": "npx watch \"npm run build\" src --wait 1",
     "serve": "serve -n -l 8080"
   },

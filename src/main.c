@@ -4,8 +4,8 @@
 #include "util.c"
 #include "global.c"
 #include "init.c"
-#include "update.c"
-#include "draw.c"
+#include "update/update.c"
+#include "draw/draw.c"
 
 void main() {
 
