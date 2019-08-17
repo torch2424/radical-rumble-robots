@@ -6,8 +6,8 @@
   "scripts": {
     "predev": "npm run build",
     "dev": "npx run-p serve watch",
-    "build": "npx run-s build:combine-src build:gbdk",
-    "build:combine-src": "node combine-src.js",
+    "build": "npx run-s build:tiles build:gbdk",
+    "build:tiles": "node build.js",
     "build:gbdk": "./gbdk-build.sh",
     "watch": "npx watch \"npm run build\" src --wait 1",
     "serve": "serve -n -l 8080"
@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/torch2424/radical-rumble-robots#readme",
   "devDependencies": {
+    "ggbgfx": "^1.0.0",
+    "ggbgfx-cli": "^1.0.0",
     "npm-run-all": "^4.1.5",
     "serve": "^11.1.0",
     "wasmboy": "^0.5.0",
