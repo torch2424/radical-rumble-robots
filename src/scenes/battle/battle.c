@@ -19,7 +19,7 @@ void battleInit() {
   SPRITES_8x8;
 
   // Set up our sprite data
-  set_sprite_data(0, 4, Robot);
+  set_sprite_data(0, 20, Robot);
 
   // Set up our fighters
   fighterOne.x = 50;
