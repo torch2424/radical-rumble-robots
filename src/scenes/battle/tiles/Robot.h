@@ -10,7 +10,7 @@
   Compression          : None.
   Counter              : None.
   Tile size            : 16 x 16
-  Tiles                : 0 to 0
+  Tiles                : 0 to 5
 
   Palette colors       : None.
   SGB Palette          : None.
@@ -24,8 +24,8 @@
 
 
 /* Bank of tiles. */
-#define TileLabelBank 0
+#define RobotBank 0
 /* Start of tile array. */
-extern unsigned char TileLabel[];
+extern unsigned char Robot[];
 
 /* End of ROBOT.H */

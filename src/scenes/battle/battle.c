@@ -2,6 +2,8 @@
 #include "battle-joypad.c"
 
 #include "tiles/Robot.c" 
+#include "tiles/Platform.c"
+#include "tiles/Omega.c"
 
 void battleInit() {
 
@@ -9,11 +11,12 @@ void battleInit() {
   int i;
 
   // Initialize our background
+  set_bkg_data(0, 10, Platform);
+  set_bkg_tiles(0, 0, 10, 10, Omega);
   SHOW_BKG;
 
   // Initialize our sprites
   SPRITES_8x8;
-  SHOW_SPRITES;
 
   // Set up our sprite data
   set_sprite_data(0, 4, Robot);
@@ -25,6 +28,8 @@ void battleInit() {
     fighterOne.spriteIds[i] = i;
     fighterOne.tileNums[i] = i;
   }
+
+  SHOW_SPRITES;
 }
 
 void battleUpdate() {
