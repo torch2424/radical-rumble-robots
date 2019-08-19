@@ -3,17 +3,11 @@
 
 #include "util.c"
 #include "global.c"
-#include "init.c"
-#include "update/update.c"
-#include "draw/draw.c"
+#include "scenes/scenes.c"
 
 void main() {
-
-  init();
-
   while(1) {
-    update();
-    draw();
+    sceneTick();
     waitForFrame();
   }
 }

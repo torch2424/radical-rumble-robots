@@ -1,5 +1,5 @@
 
-void updateJoypad() {
+void updateBattleJoypad() {
   if(joypad() & J_RIGHT) {
     fighterOne.x++;
   }
