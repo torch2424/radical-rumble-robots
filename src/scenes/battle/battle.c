@@ -1,4 +1,6 @@
-#include "battle-globals.c"
+#include <gb/gb.h>
+
+#include "battle-globals.h"
 #include "battle-joypad.c"
 
 #include "tiles/Robot.c" 
